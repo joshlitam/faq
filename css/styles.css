@@ -47,7 +47,8 @@ main {
 
 ul {
     width: 80%;
-    color: hsl(237, 12%, 33%)
+    color: hsl(237, 12%, 33%);
+    overflow: hidden;
 }
 
 .woman {
@@ -84,18 +85,23 @@ details > summary {
     list-style: none;
     color: hsl(240, 6%, 50%)
   }
-  details > summary::-webkit-details-marker {
-    display: none;
-  }
 
-  details[open] > summary {
-    color: hsl(237, 12%, 33%);
-    font-weight: 700;
-  }
+details > summary::-webkit-details-marker {
+display: none;
+}
 
-  details[open] > summary > img {
-    transform: rotate(180deg);
-  }
+details[open] > summary {
+color: hsl(237, 12%, 33%);
+font-weight: 700;
+}
+
+details[open] > summary > img {
+transform: rotate(180deg);
+}
+
+summary {
+cursor: pointer;
+}
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 344px) {
